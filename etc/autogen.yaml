@@ -1,0 +1,50 @@
+global_config:
+  mode: binomial
+  trait_threshold: 40
+  gene_number: 2
+  pair_number: 1
+  chromosome_number: 1
+  residual_variance: 1.0
+  population_mode: F2
+
+chromosome_config:
+  -
+    chr: 1
+    marker_mode: fix
+    marker_number: 8
+    marker_interval: 16
+
+gene_config:
+  -
+    id: 1
+    chr: 1
+    location_interval: 2
+    left_distance: 2
+    aa_effect: 10
+    ad_effect: 15
+    da_effect: 15
+    dd_effect: 20
+    variance_AA*E: 2
+    variance_AD*E: 3.1
+    variance_DA*E: 0
+    variance_DD*E: 0
+  -
+    id: 2
+    chr: 1
+    mode: random
+    location_interval: 4
+    left_distance: 4
+    aa_effect: 20
+    ad_effect: 25
+    da_effect: 25
+    dd_effect: 30
+    variance_AA*E: 2
+    variance_AD*E: 2
+    variance_DA*E: 2
+    variance_DD*E: 2
+
+pair_config:
+  -
+    gene_a: 1
+    gene_b: 2
+    
